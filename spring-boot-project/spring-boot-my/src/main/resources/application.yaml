@@ -1,0 +1,7 @@
+spring:
+  boot:
+    enableautoconfiguration: true
+
+server:
+  port: 8381
+

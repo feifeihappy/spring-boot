@@ -77,7 +77,7 @@ import org.springframework.core.io.support.SpringFactoriesLoader;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Inherited
-@AutoConfigurationPackage
+@AutoConfigurationPackage//作用：将main包下的所有组件注册到容器中
 @Import(AutoConfigurationImportSelector.class)
 public @interface EnableAutoConfiguration {
 
