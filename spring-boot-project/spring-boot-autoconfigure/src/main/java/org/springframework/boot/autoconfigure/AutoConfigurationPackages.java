@@ -120,6 +120,7 @@ public abstract class AutoConfigurationPackages {
 
 		@Override
 		public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
+//			com.example.springbootmy 所在的包下面所有的组件都扫描注冊到 spring 容器中
 			register(registry, new PackageImport(metadata).getPackageName());
 		}
 

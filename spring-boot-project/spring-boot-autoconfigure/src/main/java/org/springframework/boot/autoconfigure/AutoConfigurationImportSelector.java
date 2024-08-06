@@ -90,9 +90,11 @@ public class AutoConfigurationImportSelector implements DeferredImportSelector, 
 
 	@Override
 	public String[] selectImports(AnnotationMetadata annotationMetadata) {
+		// <1>.判断自动装配开关是否打开
 		if (!isEnabled(annotationMetadata)) {
 			return NO_IMPORTS;
 		}
+		//<2>.获取所有需要装配的bean
 		AutoConfigurationMetadata autoConfigurationMetadata = AutoConfigurationMetadataLoader
 				.loadMetadata(this.beanClassLoader);
 		AutoConfigurationEntry autoConfigurationEntry = getAutoConfigurationEntry(autoConfigurationMetadata,
