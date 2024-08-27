@@ -40,7 +40,7 @@ import org.springframework.context.annotation.Configuration;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Configuration
+@Configuration //https://blog.csdn.net/yanpenglei/article/details/135743252  （Spring注解是如何实现的）
 public @interface SpringBootConfiguration {
 
 }

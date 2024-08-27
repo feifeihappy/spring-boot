@@ -121,6 +121,7 @@ public abstract class AutoConfigurationPackages {
 		@Override
 		public void registerBeanDefinitions(AnnotationMetadata metadata, BeanDefinitionRegistry registry) {
 //			com.example.springbootmy 所在的包下面所有的组件都扫描注冊到 spring 容器中
+//			@AutoConfigurationPackage 就是将主配置类（@SpringBootApplication 标注的类）所在的包下面所有的组件都扫描注冊到 spring 容器中。
 			register(registry, new PackageImport(metadata).getPackageName());
 		}
 

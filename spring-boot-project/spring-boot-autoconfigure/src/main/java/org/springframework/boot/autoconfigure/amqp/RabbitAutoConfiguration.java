@@ -84,6 +84,9 @@ import org.springframework.context.annotation.Import;
  * @since 1.0.0
  */
 @Configuration
+//classpath中存在该类时起效
+// 检查相关的类：RabbitTemplate 和 Channel是否存在
+// 存在才会加载
 @ConditionalOnClass({ RabbitTemplate.class, Channel.class })
 @EnableConfigurationProperties(RabbitProperties.class)
 @Import(RabbitAnnotationDrivenConfiguration.class)
