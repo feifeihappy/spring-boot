@@ -44,6 +44,8 @@ import org.springframework.transaction.support.TransactionTemplate;
  *
  * @author Stephane Nicoll
  * @since 1.3.0
+ *
+ * 自动装配的类
  */
 @Configuration
 @ConditionalOnClass(PlatformTransactionManager.class)
@@ -77,6 +79,8 @@ public class TransactionAutoConfiguration {
 
 	}
 
+
+	//支持 动态代理的两种实现方式 jdk、Cglib
 	@Configuration
 	@ConditionalOnBean(PlatformTransactionManager.class)
 	@ConditionalOnMissingBean(AbstractTransactionManagementConfiguration.class)
